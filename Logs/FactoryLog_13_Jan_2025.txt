@@ -1,0 +1,7 @@
+﻿2025-01-13 12:56:02:6882 : EXCEPTION - BindRow Error: DataBinding: 'Task_8.DataBaseHelper+ColumnNames' does not contain a property with the name 'AvailabilityData'.
+2025-01-13 13:03:23:7579 : EXCEPTION - BindRow Error: DataBinding: 'Task_8.DataBaseHelper+ColumnNames' does not contain a property with the name 'AvailabilityData'.
+2025-01-13 13:04:12:8418 : EXCEPTION - BindRow Error: DataBinding: 'Task_8.DataBaseHelper+ColumnNames' does not contain a property with the name 'AvailabilityData'.
+2025-01-13 13:05:42:5930 : EXCEPTION - BindRow Error: DataBinding: 'Task_8.DataBaseHelper+ColumnNames' does not contain a property with the name 'AvailabilityData'.
+2025-01-13 13:10:21:2626 : EXCEPTION - BindRow Error: DataBinding: 'Task_8.DataBaseHelper+ColumnNames' does not contain a property with the name 'AvailabilityData'.
+2025-01-13 13:20:59:6880 : EXCEPTION - BindRow Error: DataBinding: 'Task_8.DataBaseHelper+ColumnNames' does not contain a property with the name 'AvailabilityData'.
+2025-01-13 13:24:28:9051 : EXCEPTION - BindRow Error: DataBinding: 'Task_8.DataBaseHelper+ColumnNames' does not contain a property with the name 'AvailabilityData'.

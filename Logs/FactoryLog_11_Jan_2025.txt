@@ -1,0 +1,166 @@
+﻿2025-01-11 09:13:26:5438 : EXCEPTION - FetchDBData : Invalid attempt to call Read when reader is closed.
+2025-01-11 09:13:43:1159 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:14:32:7785 : EXCEPTION - FetchDBData : Invalid attempt to call Read when reader is closed.
+2025-01-11 09:16:21:0705 : EXCEPTION - FetchDBData : Invalid attempt to call Read when reader is closed.
+2025-01-11 09:19:44:4539 : EXCEPTION - FetchDBData : Invalid attempt to call Read when reader is closed.
+2025-01-11 09:25:48:0159 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:27:39:7185 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:27:40:0201 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:27:40:0437 : EXCEPTION - Page_Load Error: Column 'NonthLevel_KWH' does not belong to table .
+2025-01-11 09:28:36:9168 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:28:37:2227 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:28:37:3028 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:31:10:9266 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:31:11:1769 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:31:11:2425 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:35:00:1989 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:35:00:4391 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:35:00:4818 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:36:08:6066 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:36:09:0085 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:36:09:0517 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:36:39:9384 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:36:40:2396 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:36:40:2661 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:36:49:2088 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:36:49:4707 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:36:49:5194 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:37:42:6070 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:37:42:8407 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:37:42:8858 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:40:28:6951 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:40:29:0029 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:40:29:0477 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:40:54:0904 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:40:54:3952 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:40:54:4412 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:41:18:1538 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:41:18:4587 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:41:18:4962 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:41:34:0261 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:41:34:3216 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:41:34:3676 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:42:13:8589 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:42:14:2693 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:42:14:3143 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:42:43:7576 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:42:44:0680 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:42:44:1108 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:43:17:2431 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:43:17:5212 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:43:17:5548 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:43:42:5481 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:43:42:8628 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:43:42:8798 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:46:26:6955 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:46:26:9859 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:46:27:0017 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:47:18:1572 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:47:18:3949 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:47:18:4290 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:47:33:5320 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:47:33:7667 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:47:33:8034 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:50:52:7346 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:50:52:9907 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:50:53:0149 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:51:06:0543 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:51:06:2942 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:51:06:3311 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:57:49:5854 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:57:49:9968 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:57:50:0413 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 09:59:04:3369 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 09:59:04:6413 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 09:59:04:6543 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:03:42:2795 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:03:42:7930 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:03:42:8388 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:13:35:4076 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:13:35:7539 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:13:35:7798 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:13:58:2435 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:13:58:5658 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:13:58:6260 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:14:49:3422 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:14:49:6200 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:14:49:6690 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:15:47:6074 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:15:47:9140 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:15:47:9547 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:17:24:9366 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:17:25:6950 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:17:25:7435 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:18:25:9124 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:18:26:1555 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:18:26:2059 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:19:29:7146 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:19:30:1275 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:19:30:1781 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:21:52:0142 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:21:52:2667 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:21:52:3174 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:25:17:7635 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:25:18:0772 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:25:18:1427 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:27:46:2420 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:27:46:5519 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:27:46:5870 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:28:07:8539 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:28:08:2327 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:28:08:2976 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:29:08:2277 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:29:08:4759 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:29:08:5266 : EXCEPTION - BindRow Error: Value cannot be null.
+Parameter name: expression
+2025-01-11 10:35:09:5590 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:35:10:0746 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:35:54:0968 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:35:54:3854 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:40:29:7423 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:40:30:0623 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:42:54:2171 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:42:54:5951 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 10:44:26:6650 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:45:36:7402 : EXCEPTION - FetchDBData : Invalid attempt to call NextResult when reader is closed.
+2025-01-11 10:45:44:9708 : EXCEPTION - FetchDBData : Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
+2025-01-11 14:31:50:7942 : EXCEPTION - BindRow Error: Column 'DownCategory' does not belong to table .
+2025-01-11 15:08:41:1446 : EXCEPTION - BindRow Error: Specified cast is not valid.
+2025-01-11 15:09:20:0324 : EXCEPTION - BindRow Error: Specified cast is not valid.
+2025-01-11 15:10:48:9626 : EXCEPTION - BindRow Error: Specified cast is not valid.
+2025-01-11 15:16:38:0332 : EXCEPTION - BindRow Error: Specified cast is not valid.
+2025-01-11 15:40:53:6552 : EXCEPTION - FetchWeekDataForMachine Error: Column 'pDate' does not belong to table .
