@@ -13,6 +13,8 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <style>
         body {
             background-color: black;
@@ -27,29 +29,32 @@
         }
 
         .header-center {
-            width: 55%;
-            height: 48px;
+            width: 60vw;
+            height: 1vw;
+                margin-left: 4em;
+   
             background-color: #222222;
             border-radius: 10px;
             text-align: center;
-            padding-top: 8px;
-            margin-left: 100px;
+             padding: 0.2vw;
+    padding-bottom: 1.4vw;
         }
 
         .header-title {
-            font-size: 35px;
+            font-size: 2.1vw;
             font-weight: bold;
             font-family: monospace;
         }
 
         .header-right {
             display: flex;
-            font-size: 25px;
+            font-size: 1.1vw;
             flex-direction: column;
             font-weight: 550;
             font-family: sans-serif;
             line-height: 1;
-            margin: 5px;
+            margin: 0.2vw;
+            margin-right: 0vw;
         }
 
         .shiftA {
@@ -61,23 +66,24 @@
         }
 
         .TD {
-            width: 30%;
-            height: 40px;
+            width: 50vw;
+            height: 0.7vw;
             background-color: #222222;
             border-radius: 8px;
             text-align: center;
-            padding: 2px;
-            margin-right: 35px;
-            margin-left: 35px;
-            font-size: 30px;
-            font-family: sans-serif;
-            padding-top: 10px;
+           
+            margin-right: 4vh;
+            margin-left: 4vh;
+                font-size: 1.6vw;
+    font-family: sans-serif;
+    padding: 1vh;
+    padding-bottom: 3.6vh
         }
 
         .machineid {
-            margin-right: 30px;
-            padding-top: 4px;
-            padding-bottom: 6px;
+            margin-right: 6vh;
+            padding-top: 0vh;
+          
         }
 
         #firstTD {
@@ -87,173 +93,194 @@
 
         .ThirdRow {
             display: flex;
-            margin-left: 60px;
-            margin-right: 60px;
+            margin-left: 3.2vw;
+            margin-right: 4.4vw;
         }
 
         .thirdRowTD {
-            margin-right: 10px;
-            margin-left: 10px;
+         
+            margin-left: 1vw;
             border-radius: 10px;
             background-color: #222222;
-            width: 200px;
-            height: 120px;
+            width: 10vw;
+            height: 7vw;
         }
 
         .toplefttext {
-            padding-top: 8px;
-            font-size: 20px;
+            padding-top: 0.4vw;
+           
+           
             font-family: sans-serif;
         }
 
         .toprighttext {
-            font-size: 12px;
-            padding-top: 12px;
+        
+            padding-top: 0.8vw;
             font-family: sans-serif;
         }
+         .toplefttext1 {
+     padding-top: 0.4vw;
+     font-size:1vw;
+    
+     font-family: sans-serif;
+ }
 
+ .toprighttext1 {
+       font-size:0.7vw;
+     padding-top: 0.6vw;
+     font-family: sans-serif;
+ }
         .Boxdata {
             display: flex;
             justify-content: space-around;
-            padding: 6px;
+            padding: 0.3vw;
         }
 
         .Boxdata6 {
             display: flex;
-            padding: 6px;
+           padding: 0.4vw;
+    padding-left: 0.6vw;
         }
 
         .subheading {
-            font-size: 12px;
-            padding-top: 15px;
-            padding-left: 6px;
+           font-size: 0.7vw;
+    padding-top: 0.9vw;
+    padding-left: 0.3vw;
         }
 
         .row3image {
-            padding-left: 20px;
+           padding-left: 1.2vw;
+           width: 2vw;
         }
 
         .value {
             text-align: center;
-            font-size: 30px;
-            padding: 6px;
+            font-size: 1.8vw;
+            padding: 0.4vw;
             color: orange;
             font-weight: 600;
             font-family: sans-serif;
         }
 
         .FourthRow {
-            margin-right: 10px;
-            margin-left: 10px;
+           
+            margin-left: 4.1vw;
         }
 
         .leftchart {
             background-color: #222222;
-            width: 50%;
-            margin-left: 60px;
+         
             border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 0.5vw;
         }
 
         .leftchartheading {
-            justify-content: space-between;
-            padding: 10px;
-            padding-left: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
+           justify-content: space-between;
+    padding: 0.5vw;
+    padding-left: 20px;
+    padding-left: 1vw;
+    padding-right: 1vw;
         }
 
         .chartrightheading {
-            padding-top: 6px;
-            margin-top: 10px;
-            background-color: black;
-            border-radius: 10px;
-            height: 24px;
+         margin-top: 0.3vw;
+    background-color: black;
+    border-radius: 8px;
+    height: 1.3vw;
+    margin-left: 0.5vw;
+    display: flex
+;
         }
 
         .chartrightheading1 {
-            background-color: black;
-            padding-top: 6px;
-            padding-left: 12px;
-            padding-right: 12px;
-            border-radius: 10px;
-            margin-top: 20px;
+         font-size: 0.9vw;
+    background-color: black;
+    padding-top: 1px;
+    padding-left: 0.6vw;
+    padding-right: 0.3vw;
+    border-radius: 8px;
+   
         }
 
         .chartrightheading2 {
-            background-color: #222222;
-            padding-top: 5px;
-            padding-bottom: 6px;
-            padding-left: 12px;
-            padding-right: 12px;
-            border-radius: 10px;
+                font-size: 0.9vw;
+    background-color: #36454F;
+                  padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    border-radius: 8px;
         }
 
         .metric {
-            margin-bottom: 12px;
-            font-size: 18px;
+          margin-bottom: 0.6vw;
+            font-size: 1vw;
             font-family: sans-serif;
         }
 
         .progress-bar {
-            width: 100%;
+            width: 20vw;
             border-radius: 5px;
             overflow: hidden;
-            height: 20px;
+            height: 1.4vw;
             position: relative;
+             padding-bottom: 0.4vw;
         }
 
         .progress-fill {
-            height: 100%;
+            height: 1.4vw;
             border-radius: 5px;
             background-color: #125999
         }
 
         .progress-bar1 {
-            width: 80%;
+            width: 18vw;
             border-radius: 2px;
             overflow: hidden;
-            height: 20px;
+            height: 1.4vw;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 0.8vw;
         }
 
         .progress-fill1 {
-            height: 100%;
+            height: 1.4vw;
             border-radius: 2px;
             background-color: #125999
         }
 
         .secondrowTD {
-            margin-right: 15px;
+            margin-right: 1vw;
             background-color: #222222;
-            width: 18%;
+            width: 17vw;
+          
+            padding-top: 2vh;
             border-radius: 15px;
         }
 
         .secondRow {
-            margin-top: 20px;
-            margin-bottom: 20px;
+        
             display: flex;
+            margin-left: 4.1vw;  
+            margin-top: 1.7vh; 
+            margin-bottom: 2vh;
+                margin-right: 2.6vw;
         }
 
         .range {
-            padding: 10px;
-            padding-top: 30px;
-            padding-left: 15px;
+          
+            padding-top: 1vw;
+            padding-left: 1vw;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Timer runat="server" OnTick="Timer1_Tick" ID="Timer1" Interval="12000"></asp:Timer>
+            <asp:Timer runat="server" OnTick="Timer1_Tick" ID="Timer1" Interval="10000"></asp:Timer>
             <asp:ScriptManager runat="server"></asp:ScriptManager>
             <asp:UpdatePanel runat="server" ID="updatePanel1" UpdateMode="Conditional" ChildrenAsTriggers="false">
                 <ContentTemplate>
-                    <div style="padding: 15px;">
+                    <div style="padding: 0.4vw;">
                         <div class="header">
-                            <img runat="server" src="./Images/AmitLogo-Transparent.png" alt="Amit_Logo" style="width: 140px; height: 60px; background-color: black;" />
+                            <img runat="server" src="./Images/AmitLogo-Transparent.png" alt="Amit_Logo" style="width: 6.4vw; height: 3.3vw; background-color: black;" />
                             <div class="header-center">
                                 <asp:Label runat="server" Text="ANDON-TPM Trak" class="header-title"></asp:Label>
                             </div>
@@ -273,7 +300,7 @@
                             <div runat="server" class="firstRow">
                                 <div runat="server" class="TD" id="firstTD">
                                     <asp:Label runat="server" Text='<%# Eval("MachineInterfaceID") %>' CssClass="machineid"></asp:Label>
-                                    <img runat="server" src="./Images/running.png" style="height: 26px;" />
+                                    <img runat="server" src="./Images/running.png" style="height: 1em;" />
                                 </div>
                                 <div runat="server" class="TD" id="secondTD">
                                     <asp:Label runat="server" Text='<%# Eval("MachineID") %>'></asp:Label>
@@ -282,74 +309,74 @@
                                     <asp:Label runat="server" Text='<%# Eval("LatestOpnDescription") %>'></asp:Label>
                                 </div>
                             </div>
-                            <div runat="server" class="secondRow" style="display: flex; margin-left: 72px;">
-                                <div runat="server" class="secondrowTD" style="padding-top: 15px;">
-                                    <asp:Label runat="server" Text="OEE" Style="padding-left: 20px; font-size: 20px; font-family: sans-serif;"></asp:Label>
-                                    <div style="display: flex; margin-top: 5px;">
+                            <div runat="server" class="secondRow" style="">
+                                <div runat="server" class="secondrowTD" style="">
+                                    <asp:Label runat="server" Text="OEE" Style="padding-left: 1.2vw; font-size: 1.1vw; font-family: sans-serif;"></asp:Label>
+                                    <div style="display: flex; ">
                                         <div style="">
-                                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 30px;" />
+                                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 2vw;" />
                                         </div>
-                                        <asp:Label runat="server" Text="(%)" CssClass="toprighttext" Style="padding-left: 5px; font-size: 12px;"></asp:Label>
+                                        <asp:Label runat="server" Text="(%)" CssClass="toprighttext" Style="padding-left: 0.3vw; font-size:  0.7vw;"></asp:Label>
 
                                     </div>
-                                    <div id="solidgaugecontainer" style="width: 60%; height: 200px; margin-left: 60px;"></div>
+                                    <div id="solidgaugecontainer" style="    width: 12vw;    margin-left: 2.6vw;   height: 11vw;"></div>
                                 </div>
 
-                                <div runat="server" class="secondrowTD" style="width: 28.3%;">
-                                    <div style="display: flex; font-size: 28px; padding-top: 10px; padding-left: 10px; padding-bottom: 10px;">
-                                        <asp:Label runat="server" Text="Part Count" CssClass="toplefttext" Style="font-size: 20px; padding-left: 15px;"></asp:Label>
-                                        <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 10px; font-size: 16px; padding-top: 10px;"></asp:Label>
-                                        <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 30px;" />
+                                <div runat="server" class="secondrowTD" style="width: 26vw;padding-top: 0.5vw;">
+                                    <div style="display: flex;  padding-bottom: 0.6vw;">
+                                        <asp:Label runat="server" Text="Part Count" CssClass="toplefttext" Style="font-size: 1.3vw; padding-left: 1vw;"></asp:Label>
+                                        <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 0.4vw; font-size: 0.8vw; "></asp:Label>
+                                        <img runat="server" src="./Images/speedometer.png" class="row3image" style="    padding-left: 1vw;" />
                                     </div>
                                     <div class="range">
-                                        <div class="metric" style="padding-right: 20px; padding-left: 10px; padding-bottom: 40px;">
+                                        <div class="metric" style="padding-right: 1.2vw; padding-bottom: 2.4vw;">
                                             <div style="display: flex;">
-                                                <label class="name" style="padding-right: 20px;">Shift 1</label>
+                                                <label class="name" style="padding-right: 1.8vw;">Shift 1</label>
                                                 <div class="progress-bar1" style="display: flex">
                                                     <div id="" class="progress-fill1" style='<%# Eval("ShiftPartCountstyle") %>'></div>
                                                     <div id="" class="progress-fill1" style='<%# Eval("ShiftTargetstyle") %>'></div>
                                                 </div>
                                             </div>
-                                            <div style="display: flex; padding-left: 84px;">
-                                                <div style="display: flex; padding-right: 20px;">
-                                                    <div style="width: 10px; height: 10px; background-color: blue; border-radius: 50px; margin-right: 5px; margin-top: 2px;"></div>
-                                                    <label class="availdata" style="padding-right: 5px;">Actual - </label>
+                                            <div style="display: flex; padding-left: 6vw;">
+                                                <div style="display: flex; padding-right: 1.6vw;">
+                                                    <div style="width: 0.8vw; height: 0.8vw; background-color: blue; border-radius: 50px; margin-right: 0.5vw; "></div>
+                                                    <label class="availdata" style="padding-right: 0.1vw;">Actual - </label>
                                                     <label class="availdata"><%# Eval("ShiftPartCount") %></label>
                                                 </div>
-                                                <div style="display: flex; padding-right: 20px;">
-                                                    <div style="width: 10px; height: 10px; background-color: #393433; border-radius: 50px; margin-right: 5px; margin-top: 2px;"></div>
-                                                    <label class="availdata" style="padding-right: 5px;">Target - </label>
+                                                <div style="display: flex; padding-right: 1.6vw;">
+                                                     <div style="width: 0.8vw; height: 0.8vw; background-color: #393433; border-radius: 50px; margin-right: 0.5vw; "></div>
+                                                    <label class="availdata" style="padding-right: 0.1vw;">Target - </label>
                                                     <label class="availdata"><%# Eval("ShiftTarget") %></label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="metric" style="padding-right: 20px; padding-left: 10px;">
+                                        <div class="metric" style="padding-right: 1.2vw; ">
                                             <div style="display: flex;">
-                                                <label class="name" style="padding-right: 20px;">Day</label>
-                                                <div class="progress-bar1" style="display: flex; margin-left: 16px;">
+                                                <label class="name" style="padding-right: 1.8vw;">Day</label>
+                                                <div class="progress-bar1" style="display: flex; margin-left: 1vw;">
                                                     <div id="" class="progress-fill1" style='<%# Eval("DayPartCountstyle") %>'></div>
                                                     <div id="" class="progress-fill1" style='<%# Eval("DayTargetstyle") %>'></div>
                                                 </div>
                                             </div>
-                                            <div style="display: flex; padding-left: 84px;">
-                                                <div style="display: flex; padding-right: 20px;">
-                                                    <div style="width: 10px; height: 10px; background-color: blue; border-radius: 50px; margin-right: 5px; margin-top: 2px;"></div>
-                                                    <label class="availdata" style="padding-right: 5px;">Actual - </label>
+                                            <div style="display: flex; padding-left: 6vw;">
+                                                <div style="display: flex; padding-right: 1.6vw;">
+                                                     <div style="width: 0.8vw; height: 0.8vw; background-color: blue; border-radius: 50px; margin-right: 0.5vw; "></div>
+                                                    <label class="availdata" style="padding-right: 0.1vw;">Actual - </label>
                                                     <label class="availdata"><%# Eval("DayPartCount") %></label>
                                                 </div>
-                                                <div style="display: flex; padding-right: 20px;">
-                                                    <div style="width: 10px; height: 10px; background-color: #393433; border-radius: 50px; margin-right: 5px; margin-top: 2px;"></div>
-                                                    <label class="availdata" style="padding-right: 5px;">Target - </label>
+                                                <div style="display: flex; padding-right: 1.6vw;">
+                                                    <div style="width: 0.8vw; height: 0.8vw; background-color: #393433; border-radius: 50px; margin-right: 0.5vw; "></div>
+                                                    <label class="availdata" style="padding-right: 0.1vw;">Target - </label>
                                                     <label class="availdata"><%# Eval("DayTarget") %></label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div runat="server" class="secondrowTD">
-                                    <div style="display: flex; padding-top: 10px; padding-bottom: 0px;" class="leftchartheading">
-                                        <div style="display: flex; font-size: 30px;">
-                                            <asp:Label runat="server" Text="Part Count" CssClass="toplefttext" Style="font-size: 20px;"></asp:Label>
+                                <div runat="server" class="secondrowTD" style="padding-top: 0vw">
+                                    <div style="display: flex; padding-bottom: 0px;" class="leftchartheading">
+                                        <div style="display: flex;">
+                                            <asp:Label runat="server" Text="Part Count" CssClass="toplefttext" Style="font-size: 1.3vw;"></asp:Label>
                                         </div>
                                         <div class="chartrightheading">
                                             <asp:Label runat="server" ID="labelMonth" ClientIDMode="Static" Text="month" CssClass="chartrightheading1"></asp:Label>
@@ -357,52 +384,52 @@
 
                                         </div>
                                     </div>
-                                    <div style="display: flex;">
+                                    <div style="display: flex;    margin-left: 0.1vw;">
                                         <div style="">
-                                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 30px;" />
+                                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="" />
                                         </div>
-                                        <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 10px; font-size: 16px; padding-top: 6px;"></asp:Label>
+                                        <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 0.6vw; font-size: 0.8vw; padding-top: 0.8vw;"></asp:Label>
 
                                     </div>
 
-                                    <div id="barchartcontainer" style="width: 60%; height: 180px; padding-left: 60px;"></div>
+                                    <div id="barchartcontainer" style="width: 10vw;   height: 10vw;  padding-left: 3.6vw;"></div>
                                 </div>
-                                <div runat="server" stye="" class="secondrowTD" style="width: 28.3%">
-                                    <div style="display: flex; font-size: 28px; padding-top: 10px; padding-left: 10px; padding-bottom: 10px;">
-                                        <asp:Label runat="server" Text="Month To Date (MTD)" CssClass="toplefttext" Style="font-size: 20px;"></asp:Label>
-                                        <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 10px; font-size: 16px;"></asp:Label>
-                                        <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 30px;" />
+                                <div runat="server" stye="" class="secondrowTD" style="width: 26vw;padding-top: 0.5vw;">
+                                    <div style="display: flex; padding-left: 0.9vw; padding-bottom: 0.6vw;">
+                                        <asp:Label runat="server" Text="Month To Date (MTD)" CssClass="toplefttext" Style="font-size: 1.3vw;"></asp:Label>
+                                        <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 1.3vw; font-size: 0.8vw;padding-top: 0.8vw;"></asp:Label>
+                                        <img runat="server" src="./Images/speedometer.png" class="row3image" style="padding-left: 0.8vw;" />
                                     </div>
                                     <div class="range">
                                         <div class="metric">
-                                            <div style="display: flex; padding-bottom: 6px;">
-                                                <label class="name" style="width: 50%">Req. Rate/Day</label>
+                                            <div style="display: flex; ">
+                                                <label class="name" style="width: 11vw">Req. Rate/Day</label>
 
                                                 <div class="progress-bar">
                                                     <div id="" class="progress-fill" style='<%# Eval("AskRateData") %>'></div>
                                                 </div>
                                             </div>
-                                            <label class="" style="margin-left: 72%"><%# Eval("AskRate") %> </label>
+                                            <label class="" style="margin-left: 18vw"><%# Eval("AskRate") %> </label>
                                         </div>
                                         <div class="metric">
-                                            <div style="display: flex; padding-bottom: 6px;">
-                                                <label class="name" style="width: 50%">Hit Rate/Day</label>
+                                            <div style="display: flex; ">
+                                                <label class="name" style="width: 11vw">Hit Rate/Day</label>
 
                                                 <div class="progress-bar">
                                                     <div id="" class="progress-fill" style='<%# Eval("HitRateData") %>'></div>
                                                 </div>
                                             </div>
-                                            <label class="" style="margin-left: 67%"><%# Eval("HitRate") %></label>
+                                            <label class="" style="margin-left: 18vw"><%# Eval("HitRate") %></label>
                                         </div>
                                         <div class="metric">
-                                            <div style="display: flex; padding-bottom: 6px;">
-                                                <label class="name" style="width: 50%">Ask Rate/Day</label>
+                                            <div style="display: flex; ">
+                                                <label class="name" style="width: 11vw">Ask Rate/Day</label>
 
                                                 <div class="progress-bar">
                                                     <div id="" class="progress-fill" style='<%# Eval("ReqRateData") %>'></div>
                                                 </div>
                                             </div>
-                                            <label class="qualitydata" style="margin-left: 85%"><%# Eval("ReqRate") %></label>
+                                            <label class="qualitydata" style="margin-left: 21.5vw"><%# Eval("ReqRate") %></label>
                                         </div>
                                     </div>
                                 </div>
@@ -410,8 +437,8 @@
                             <div runat="server" class="ThirdRow">
                                 <div runat="server" id="thirdRowTD1" class="thirdRowTD">
                                     <div class="Boxdata">
-                                        <asp:Label runat="server" Text="Idle Time" Style="" CssClass="toplefttext"></asp:Label>
-                                        <asp:Label runat="server" Text="(Shift 1)" CssClass="toprighttext"></asp:Label>
+                                        <asp:Label runat="server" Text="Idle Time" Style="" CssClass="toplefttext1"></asp:Label>
+                                        <asp:Label runat="server" Text="(Shift 1)" CssClass="toprighttext1"></asp:Label>
                                     </div>
                                     <div class="" style="display: flex">
                                         <img runat="server" src="./Images/speedometer.png" class="row3image" />
@@ -423,8 +450,8 @@
                                 </div>
                                 <div runat="server" class="thirdRowTD">
                                     <div class="Boxdata">
-                                        <asp:Label runat="server" Text="Idle Time" CssClass="toplefttext"></asp:Label>
-                                        <asp:Label runat="server" Text="(Cumulative)" CssClass="toprighttext" Style=""></asp:Label>
+                                        <asp:Label runat="server" Text="Idle Time" CssClass="toplefttext1"></asp:Label>
+                                        <asp:Label runat="server" Text="(Cumulative)" CssClass="toprighttext1" Style=""></asp:Label>
                                     </div>
                                     <div style="display: flex">
                                         <img runat="server" src="./Images/speedometer.png" class="row3image" />
@@ -436,8 +463,8 @@
                                 </div>
                                 <div runat="server" class="thirdRowTD">
                                     <div class="Boxdata">
-                                        <asp:Label runat="server" Text="Rejection" CssClass="toplefttext"></asp:Label>
-                                        <asp:Label runat="server" Text="(Today)" CssClass="toprighttext"></asp:Label>
+                                        <asp:Label runat="server" Text="Rejection" CssClass="toplefttext1"></asp:Label>
+                                        <asp:Label runat="server" Text="(Today)" CssClass="toprighttext1"></asp:Label>
                                     </div>
                                     <div style="display: flex">
                                         <img runat="server" src="./Images/speedometer.png" class="row3image" />
@@ -449,8 +476,8 @@
                                 </div>
                                 <div runat="server" class="thirdRowTD">
                                     <div class="Boxdata">
-                                        <asp:Label runat="server" Text="Rejection" CssClass="toplefttext"></asp:Label>
-                                        <asp:Label runat="server" Text="(Cumulative)" CssClass="toprighttext" Style=""></asp:Label>
+                                        <asp:Label runat="server" Text="Rejection" CssClass="toplefttext1"></asp:Label>
+                                        <asp:Label runat="server" Text="(Cumulative)" CssClass="toprighttext1" Style=""></asp:Label>
                                     </div>
                                     <div style="display: flex">
                                         <img runat="server" src="./Images/speedometer.png" class="row3image" />
@@ -462,8 +489,8 @@
                                 </div>
                                 <div runat="server" class="thirdRowTD">
                                     <div class="Boxdata">
-                                        <asp:Label runat="server" Text="Power" CssClass="toplefttext"></asp:Label>
-                                        <asp:Label runat="server" Text="(Cumulative)" CssClass="toprighttext" Style=""></asp:Label>
+                                        <asp:Label runat="server" Text="Power" CssClass="toplefttext1"></asp:Label>
+                                        <asp:Label runat="server" Text="(Cumulative)" CssClass="toprighttext1" Style=""></asp:Label>
                                     </div>
                                     <div style="display: flex">
                                         <img runat="server" src="./Images/speedometer.png" class="row3image" />
@@ -473,13 +500,13 @@
                                         <asp:Label runat="server" Text='<%# Eval("MonthLevel_KWH") %>'></asp:Label>
                                     </div>
                                 </div>
-                                <div runat="server" class="thirdRowTD" style="width: 35.4%; font-size: 20px;">
+                                <div runat="server" class="thirdRowTD" style="width: 34vw; font-size: 1.2vw;">
                                     <div class="Boxdata6">
-                                        <asp:Label runat="server" Text="Current Downtime Reason" CssClass="toplefttext"></asp:Label>
+                                        <asp:Label runat="server" Text="Current Downtime Reason" CssClass="toplefttext1"></asp:Label>
                                     </div>
                                     <div style="display: flex">
-                                        <img runat="server" src="./Images/speedometer.png" class="row3image" />
-                                        <asp:Label runat="server" Text='<%# Eval("HelpReqStatus") %>' Style="color: red; padding: 8px; padding-top: 12px;"></asp:Label>
+                                        <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 2vw;    height: 2vw;" />
+                                        <asp:Label runat="server" Text='<%# Eval("HelpReqStatus") %>' Style="color: red; padding:0.4vw"></asp:Label>
                                     </div>
                                 </div>
                             </div>
@@ -490,34 +517,34 @@
                     <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
                 </Triggers>
             </asp:UpdatePanel>
-            <div runat="server" class="FourthRow" style="display: flex; margin-right: 75px;">
-                <div class="leftchart" style="width: 47.3%;">
+            <div runat="server" class="FourthRow" style="display: flex; margin-right: 4vw;">
+                <div class="leftchart" style="width: 44vw;">
                     <div style="display: flex;" class="leftchartheading">
-                        <div style="display: flex; font-size: 30px;">
-                            <asp:Label runat="server" Text="Monthly Production" CssClass="toplefttext" Style="font-size: 24px;"></asp:Label>
-                            <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 10px; font-size: 18px; padding-top: 14px;"></asp:Label>
-                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 30px;" />
+                        <div style="display: flex; font-size: 1.4vw;">
+                            <asp:Label runat="server" Text="Monthly Production" CssClass="toplefttext" Style="font-size: 1.4vw;"></asp:Label>
+                            <asp:Label runat="server" Text="(no's)" CssClass="toprighttext" Style="padding-left: 10px; font-size: 0.9vw; padding-top: 0.8vw;"></asp:Label>
+                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="" />
                         </div>
                         <div class="chartrightheading">
                             <asp:Label runat="server" ID="weeklabel2" Text="week" CssClass="chartrightheading1"></asp:Label>
                             <asp:Label runat="server" ID="monthlabel2" Text="month" CssClass="chartrightheading2"></asp:Label>
                         </div>
                     </div>
-                    <div id="leftchartcontainer" style="width: 80%; height: 200px; background-color: #222222; margin-left: 90px; padding: 5px; border-radius: 10px;"></div>
+                    <div id="leftchartcontainer" style="width: 37vw; height: 11vw; background-color: #222222; margin-left: 4vw; padding: 5px; border-radius: 10px;"></div>
                 </div>
-                <div class="leftchart" style="margin-left: 20px; width: 47.3%;">
+                <div class="leftchart" style="margin-left: 1vw; width: 44vw;">
                     <div style="display: flex;" class="leftchartheading">
-                        <div style="display: flex; font-size: 30px;">
-                            <asp:Label runat="server" Text="Monthly Time Analysis" CssClass="toplefttext" Style="font-size: 24px;"></asp:Label>
-                            <asp:Label runat="server" Text="(HH:MM)" CssClass="toprighttext" Style="padding-left: 10px; font-size: 18px; padding-top: 14px;"></asp:Label>
-                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="width: 30px;" />
+                        <div style="display: flex; font-size: 1.4vw;">
+                            <asp:Label runat="server" Text="Monthly Time Analysis" CssClass="toplefttext" Style="font-size: 1.4vw;"></asp:Label>
+                            <asp:Label runat="server" Text="(HH:MM)" CssClass="toprighttext" Style="padding-left: 0.4vw;    font-size: 0.9vw;    padding-top: 0.8vw;"></asp:Label>
+                            <img runat="server" src="./Images/speedometer.png" class="row3image" style="" />
                         </div>
                         <div class="chartrightheading">
                             <asp:Label runat="server" ID="weeklabel1" Text="week" CssClass="chartrightheading1"></asp:Label>
                             <asp:Label runat="server" ID="monthlabel1" Text="month" CssClass="chartrightheading2"></asp:Label>
                         </div>
                     </div>
-                    <div id="rightcontainer" style="width: 80%; height: 200px; background-color: #222222; padding: 5px; padding-left: 80px; border-radius: 10px;"></div>
+                    <div id="rightcontainer" style="width: 37vw; height: 11vw; background-color: #222222; padding: 5px;    padding-left: 5vw; border-radius: 10px;"></div>
                 </div>
 
 
@@ -533,8 +560,8 @@
             let isMonthData = false;// Flag to toggle between week and month data
             let iterationCount = 0; // Counter for interval execution
 
-            // Initial fetch and render
-            fetchChartData(); // Fetch and render month data by default
+           
+            fetchChartData(); 
             fetchSolidGaugeData();
             fetchBarChartData();
 
@@ -574,11 +601,11 @@
                 isWeekData = !isWeekData;
 
                 // Increment the counter
-            }, 6000); // Interval of 5 seconds
+            }, 5000); // Interval of 5 seconds
 
             setInterval(function () {
                 fetchSolidGaugeData(); // Fetch solid gauge data every 10 seconds
-            }, 12000); // Interval of 10 seconds
+            }, 10000); // Interval of 10 seconds
             const prm = Sys.WebForms.PageRequestManager.getInstance();
             prm.add_endRequest(function () {
                 fetchChartData();
@@ -921,6 +948,7 @@
                     type: 'solidgauge',
                     backgroundColor: '#222222',
                     animation: false,
+                  
                     custom: {}, // Keep custom object for reuse
                     events: {
                         render() {
@@ -935,7 +963,7 @@
                                         .css({
                                             color: 'white',
                                             textAnchor: 'middle',
-                                            fontSize: "22px"
+                                            fontSize: "1vw"
                                         })
                                         .add();
                             }
@@ -1102,6 +1130,7 @@
             Highcharts.chart('barchartcontainer', {
                 chart: {
                     type: 'column',
+                  
                     backgroundColor: '#222222',
                     animation: false,// Black background
                 },

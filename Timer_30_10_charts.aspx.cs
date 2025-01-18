@@ -107,7 +107,6 @@ namespace Task_8
                         data.AskRateData = $"background-color:green;width:{((100 * Convert.ToDouble(dt_emptyparameters.Rows[i]["AskRate"])) / 25600).ToString()}%";
                         tempList.Add(data);
                         HttpContext.Current.Session["MachineID"] = data.MachineID;
-
                     }
                     list = tempList;
                 }
@@ -282,7 +281,13 @@ namespace Task_8
                     FetchWeekDataForMachine(row);
                 }
                 // HttpContext.Current.Session["RowDataList"] = singleRowList;
+              
                 var rowData = singleRowList[0]; // Get the first item from the list
+                // Construct the URL with query string parameters
+               //string url = $"YourPage.aspx?ShiftOEE={rowData.ShiftOEE}&YearPartCount={rowData.YearPartCount}&YearTarget={rowData.YearTarget}&MonthPartCount={rowData.MonthPartCount}&MonthTarget={rowData.MonthTarget}";
+
+                //// Redirect to the URL
+                //HttpContext.Current.Response.Redirect(url);
                 HttpContext.Current.Session["ShiftOEE"] = rowData.ShiftOEE;
                 HttpContext.Current.Session["YearPartCount"] = rowData.YearPartCount;
                 HttpContext.Current.Session["YearTarget"] = rowData.YearTarget;
@@ -437,8 +442,9 @@ namespace Task_8
                 // Retrieve the list from the session
                
                 string ShiftOEE = HttpContext.Current.Session["ShiftOEE"]?.ToString();
-               
-               // var rowDataList = HttpContext.Current.Session["RowDataList"] as List<DataBaseHelper.ColumnNames>;
+                // Retrieve the data from the query string
+                // string ShiftOEE = HttpContext.Current.Request.QueryString["ShiftOEE"];
+                // var rowDataList = HttpContext.Current.Session["RowDataList"] as List<DataBaseHelper.ColumnNames>;
 
                 if (ShiftOEE != null )
                 {
