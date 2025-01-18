@@ -121,11 +121,10 @@ namespace Task_8
            
 
         }
-        // Dictionary to store data for each MachineID
+
         private static Dictionary<string, Dictionary<string, object>> machineDataDictionary = new Dictionary<string, Dictionary<string, object>>();
         private static Dictionary<string, Dictionary<string, object>> machineWeekDataDictionary = new Dictionary<string, Dictionary<string, object>>();
 
-        // Method to fetch and store month data for a specific machine
         private void FetchMonthDataForMachine(DataBaseHelper.ColumnNames row)
         {
             try
@@ -209,11 +208,7 @@ namespace Task_8
                 DataTable dt_week1 = dt_weaklist[0];
                 DataTable dt_week2 = dt_weaklist[1];               
                 var machineweekData = new Dictionary<string, object>();
-
-                // Extract the MachineID from the current row in singleRowList.
                 string machineID = row.MachineID;
-
-                // Fetch data from dt_week1 where MachineID matches
                 var week1Data = dt_week1.AsEnumerable()
                     .Where(r => r.Field<string>("MachineID") == machineID)
                     .Select(r => new
@@ -334,8 +329,7 @@ namespace Task_8
 
             try
             {
-                // Replace this with your logic to fetch the machineID from the backend
-                string machineID = HttpContext.Current.Session["MachineID"]?.ToString(); // Example: Fetch from session
+                string machineID = HttpContext.Current.Session["MachineID"]?.ToString();
 
                 if (!string.IsNullOrEmpty(machineID) && machineDataDictionary.ContainsKey(machineID))
                 {
@@ -423,7 +417,6 @@ namespace Task_8
             }
             catch (Exception ex)
             {
-                // Log the error if necessary
                 Logger.WriteErrorLog($"SendMonthDataToAjax Error: {ex.Message}");
             }
 
@@ -454,15 +447,12 @@ namespace Task_8
             }
             catch (Exception ex)
             {
-                // Log the error if necessary
                 Logger.WriteErrorLog($"SendSolidGaugeDataToAjax Error: {ex.Message}");
             }
 
             return solidGaugeData;
         }
 
-
-        // Data class for the solid gauge
         public class SolidGaugeData
         {
             public double ShiftOEE { get; set; }
@@ -483,21 +473,17 @@ namespace Task_8
 
                 if (YearPartCount != null && YearTarget != null)
                 {
-                    // Fetch YearPartCount and YearTarget from the first row in the list
                     barChartData.YearPartCount = Convert.ToDouble(YearPartCount);
                     barChartData.YearTarget = Convert.ToDouble(YearTarget);
                 }
             }
             catch (Exception ex)
             {
-                // Log the error if necessary
                 Logger.WriteErrorLog($"SendBarChartDataToAjax Error: {ex.Message}");
             }
 
             return barChartData;
         }
-
-        // Data class for the bar chart
         public class BarChartData
         {
             public double YearPartCount { get; set; }
@@ -519,63 +505,19 @@ namespace Task_8
                 string MonthTarget = HttpContext.Current.Session["MonthTarget"]?.ToString();
 
                 if (MonthPartCount != null && MonthTarget != null)
-                {
-                    // Fetch YearPartCount and YearTarget from the first row in the list
+                { 
                     barChartDatamonth.MonthPartCount = Convert.ToDouble(MonthPartCount);
                     barChartDatamonth.MonthTarget = Convert.ToDouble(MonthTarget);
                 }
             }
             catch (Exception ex)
             {
-                // Log the error if necessary
                 Logger.WriteErrorLog($"SendBarChartDataToAjax Error: {ex.Message}");
             }
 
             return barChartDatamonth;
         }
-
-        // Data class for the bar chart
        
     }
 }
 
-
-//private void BindRow(int index)
-//{
-//    try
-//    {
-//        if (list == null || index >= list.Count) return;
-
-//        // var start = DateTime.Now;
-//        // System.Diagnostics.Debug.WriteLine($"BindRow Start: Index={index}");
-//        var singleRowList = new List<DataBaseHelper.ColumnNames> { list[index] };
-
-//        listview1.DataSource = singleRowList;
-//        listview1.DataBind();
-//        // System.Diagnostics.Debug.WriteLine($"BindRow End: Time Taken={(DateTime.Now - start).TotalMilliseconds}ms");
-//    }
-//    catch (Exception ex)
-//    {
-//        Logger.WriteErrorLog($"BindRow Error: {ex.Message}");
-//    }
-//}
-
-//protected void Timer1_Tick(object sender, EventArgs e)
-//{
-//    try
-//    {
-//        if (list == null || list.Count == 0) return;
-
-//        currentIndex++;
-//        if (currentIndex >= list.Count)
-//        {
-//            currentIndex = 0; // Reset to the first row when reaching the end
-//        }
-//        //currentIndex = (currentIndex + 1) % list.Count;
-//        BindRow(currentIndex);
-//    }
-//    catch (Exception ex)
-//    {
-//        Logger.WriteErrorLog($"Timer1_Tick Error: {ex.Message}");
-//    }
-//}

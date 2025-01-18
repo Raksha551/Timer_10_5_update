@@ -95,6 +95,7 @@
             display: flex;
             margin-left: 3.2vw;
             margin-right: 4.4vw;
+            margin-bottom:0.3vh;
         }
 
         .thirdRowTD {
@@ -259,8 +260,8 @@
         
             display: flex;
             margin-left: 4.1vw;  
-            margin-top: 1.7vh; 
-            margin-bottom: 2vh;
+            margin-top: 1.5vh; 
+            margin-bottom: 1.5vh;
                 margin-right: 2.6vw;
         }
 
@@ -554,8 +555,6 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            // To hold the chart instance globally
-
             let isWeekData = false;
             let isMonthData = false;// Flag to toggle between week and month data
             let iterationCount = 0; // Counter for interval execution
@@ -569,9 +568,7 @@
 
 
             setInterval(function () {
-                // Toggle between week and month data every 5 seconds
                 console.log("Iteration Count:", iterationCount); // Debugging iteration count
-                //if (iterationCount % 2 === 0) {
                 console.log("Switching classes for la bels");
 
                 if (isWeekData) {
@@ -604,15 +601,15 @@
             }, 5000); // Interval of 5 seconds
 
             setInterval(function () {
-                fetchSolidGaugeData(); // Fetch solid gauge data every 10 seconds
+                fetchSolidGaugeData(); 
             }, 10000); // Interval of 10 seconds
             const prm = Sys.WebForms.PageRequestManager.getInstance();
             prm.add_endRequest(function () {
                 fetchChartData();
                 fetchSolidGaugeData();
                 fetchBarChartData();
-                fetchStackedBarChartData(); // Update stacked bar chart data after UpdatePanel update
-                fetchWeekChartData();// Fetch stacked bar chart data
+                fetchStackedBarChartData(); 
+                fetchWeekChartData();
                 fetchWeekStackedBarChartData();
 
             });
@@ -624,7 +621,7 @@
         function fetchChartData() {
             $.ajax({
                 type: "POST",
-                url: "Timer_30_10_charts.aspx/SendMonthDataToAjax", // Replace with the actual page name
+                url: "Timer_30_10_charts.aspx/SendMonthDataToAjax", 
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
@@ -641,14 +638,14 @@
         function fetchWeekChartData() {
             $.ajax({
                 type: "POST",
-                url: "Timer_30_10_charts.aspx/SendWeekDataToAjax", // Replace with the actual page name
+                url: "Timer_30_10_charts.aspx/SendWeekDataToAjax", 
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
                     const data = response.d;
                     console.log("Received Week Data:", data);
                     data.pDate = data.pDate.map(dateString => formatDate(dateString));
-                    renderCombinedChart(data, true); // Render chart with week data
+                    renderCombinedChart(data, true); 
                 },
                 error: function (xhr, status, error) {
                     console.error("Error fetching Week chart data:", error);
@@ -659,13 +656,13 @@
         function fetchSolidGaugeData() {
             $.ajax({
                 type: "POST",
-                url: "Timer_30_10_charts.aspx/SendSolidGaugeDataToAjax", // Replace with actual page name
+                url: "Timer_30_10_charts.aspx/SendSolidGaugeDataToAjax", 
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
                     const data = response.d;
                     console.log("Solid Gauge Data:", data);
-                    initializeSolidGauge(data);// Update the solid gauge
+                    initializeSolidGauge(data);
                 },
                 error: function (xhr, status, error) {
                     console.error("Error fetching solid gauge data:", error);
@@ -676,13 +673,13 @@
         function fetchBarChartData() {
             $.ajax({
                 type: "POST",
-                url: "Timer_30_10_charts.aspx/SendBarChartDataToAjax", // Replace with actual page name
+                url: "Timer_30_10_charts.aspx/SendBarChartDataToAjax", 
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
                     const data = response.d;
                     console.log("Bar Chart year Data:", data);
-                    initializeBarChart(data.YearTarget, data.YearPartCount); // Update the bar chart
+                    initializeBarChart(data.YearTarget, data.YearPartCount); 
                 },
                 error: function (xhr, status, error) {
                     console.error("Error fetching bar chart year data:", error);
@@ -692,13 +689,13 @@
         function fetchBarChartMonthData() {
             $.ajax({
                 type: "POST",
-                url: "Timer_30_10_charts.aspx/SendBarChartMonthDataToAjax", // Replace with actual page name
+                url: "Timer_30_10_charts.aspx/SendBarChartMonthDataToAjax", 
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
                     const data = response.d;
                     console.log("Bar Chart month Data:", data);
-                    initializeBarChart(data.MonthTarget, data.MonthPartCount);// Update the bar chart
+                    initializeBarChart(data.MonthTarget, data.MonthPartCount);
                 },
                 error: function (xhr, status, error) {
                     console.error("Error fetching bar chart month data:", error);
@@ -741,29 +738,22 @@
         function formatDate(dateString) {
             // Remove the "/Date(" and the closing ")/" to get the timestamp
             const timestamp = dateString.replace(/\/Date\((\d+)\)\//, '$1');
-
-            // Convert the timestamp to a JavaScript Date object
             const date = new Date(parseInt(timestamp, 10));
 
-            // Check if the date is valid
             if (isNaN(date.getTime())) {
                 console.error("Invalid date format:", dateString);
-                return "Invalid Date"; // Return a default value for invalid dates
+                return "Invalid Date"; 
             }
-
-            // Extract the day and month
-            const day = String(date.getDate()).padStart(2, '0'); // Ensure 2-digit day
-            const month = String(date.getMonth() + 1).padStart(2, '0'); // Ensure 2-digit month
-
-            // Return the formatted date as "DD-MM"
+            const day = String(date.getDate()).padStart(2, '0'); 
+            const month = String(date.getMonth() + 1).padStart(2, '0'); 
             return `${day}/${month}`;
         }
 
 
         let chartInstance;
         function renderCombinedChart(data, isWeekData) {
-            const xAxisData = isWeekData ? data.pDate : data.WeekNo; // Use pDate for week data, WeekNo for month data
-            const numericXData = xAxisData.map((_, index) => index + 1); // For numeric trend line calculation
+            const xAxisData = isWeekData ? data.pDate : data.WeekNo; 
+            const numericXData = xAxisData.map((_, index) => index + 1); 
             const trendLineData = calculateTrendLine(numericXData, data.UtilisedTimeInSec);
 
             if (!chartInstance) {
@@ -772,7 +762,7 @@
                     chart: {
                         zoomType: 'xy',
                         backgroundColor: '#222222',
-                        animation: false,// Set the background to black
+                        animation: false,
                     },
                     credits: {
                         enabled: false
@@ -783,7 +773,7 @@
                     title: {
                         text: '',
                         style: {
-                            color: 'white' // Set title text color to white
+                            color: 'white' 
                         }
                     },
                     xAxis: {
@@ -791,15 +781,15 @@
                         title: {
                             text: isWeekData ? 'Dates' : 'Days',
                             style: {
-                                color: 'white' // Set x-axis title color to white
+                                color: 'white' 
                             }
                         },
                         labels: {
                             style: {
-                                color: 'white' // Set x-axis labels color to white
+                                color: 'white' 
                             }
                         },
-                        gridLineWidth: 0, // Add vertical grid lines
+                        gridLineWidth: 0,
                         gridLineColor: '#ffffff',
                         lineWidth: 1,
                         lineColor: '#ddd',
@@ -809,12 +799,12 @@
                             title: {
                                 text: 'No\'s',
                                 style: {
-                                    color: 'white' // Set left y-axis title color to white
+                                    color: 'white' 
                                 }
                             },
                             labels: {
                                 style: {
-                                    color: 'white' // Set left y-axis labels color to white
+                                    color: 'white' 
                                 }
                             },
                             gridLineWidth: 0,
@@ -825,7 +815,6 @@
                         {
                             visible: false // Hide the right-side y-axis for Target Value
                         },
-                        // Remove X-axis line
                     ],
                     tooltip: {
                         shared: true,
@@ -843,16 +832,16 @@
                             name: 'Production',
                             data: data.UtilisedTimeInSec,
                             tooltip: { valueSuffix: ' sec' },
-                            color: '#7cb5ec', // Adjust the column color as per preference
+                            color: '#7cb5ec', 
                             dataLabels: {
-                                enabled: true, // Enable data labels
-                                color: 'white', // Set data label text color to white
+                                enabled: true, 
+                                color: 'white', 
                                 style: {
-                                    textOutline: 'none', // Remove the outline around data labels
-                                    fontWeight: 'bold' // Make the font weight bold
+                                    textOutline: 'none', 
+                                    fontWeight: 'bold' 
                                 },
                                 formatter: function () {
-                                    return this.y; // Display the value of each data point
+                                    return this.y; 
                                 }
                             }
                         },
@@ -863,16 +852,16 @@
                             marker: { enabled: false },
                             data: data.TargetVal,
                             tooltip: { valueSuffix: '' },
-                            color: '#FFA500', // Adjust the line color for Target Value
+                            color: '#FFA500', 
                             dataLabels: {
-                                enabled: true, // Enable data labels
-                                color: 'white', // Set data label text color to white
+                                enabled: true, 
+                                color: 'white', 
                                 style: {
-                                    textOutline: 'none', // Remove the outline around data labels
-                                    fontWeight: 'bold' // Make the font weight bold
+                                    textOutline: 'none', 
+                                    fontWeight: 'bold' 
                                 },
                                 formatter: function () {
-                                    return this.y; // Display the value of each data point
+                                    return this.y; 
                                 }
                             }
                         },
@@ -883,27 +872,27 @@
                             marker: { enabled: false },
                             dashStyle: 'solid',
                             tooltip: { valueSuffix: ' sec' },
-                            color: '#ff0000', // Adjust the trend line color
+                            color: '#ff0000', 
                             dataLabels: {
-                                enabled: true, // Enable data labels
-                                color: 'white', // Set data label text color to white
+                                enabled: true, 
+                                color: 'white', 
                                 style: {
-                                    textOutline: 'none', // Remove the outline around data labels
-                                    fontWeight: 'bold' // Make the font weight bold
+                                    textOutline: 'none', 
+                                    fontWeight: 'bold' 
                                 },
                                 formatter: function () {
-                                    return this.y; // Display the value of each data point
+                                    return this.y; 
                                 }
                             }
                         }
                     ],
                     legend: {
-                        enabled: true, // Make sure the legend is enabled
-                        layout: 'vertical', // Arrange legend items vertically
-                        align: 'right', // Align legend to the right side
-                        verticalAlign: 'middle', // Vertically center the legend
+                        enabled: true, 
+                        layout: 'vertical', 
+                        align: 'right', 
+                        verticalAlign: 'middle', 
                         itemStyle: {
-                            color: 'white' // Set the legend text color to white
+                            color: 'white' 
                         }
                     }
                 });
@@ -922,8 +911,6 @@
 
         function calculateTrendLine(xData, yData) {
             console.log("Calculating 2-period Moving Average with:", xData, yData);
-
-            // Initialize an empty array to store the moving averages
             const trendLine = [];
 
             // Loop through the yData and calculate the 2-period moving average
@@ -931,10 +918,7 @@
                 const avg = (yData[i] + yData[i - 1]) / 2; // Average of the current and previous value
                 trendLine.push(avg); // Store the calculated moving average
             }
-
-            // The first value is undefined, as there is no previous value to average with.
-            // For consistency, we can set it to the first data point (or you can choose another default value).
-            trendLine.unshift(yData[0]); // Start the trendline with the first value
+            trendLine.unshift(yData[0]); 
 
             console.log("2-Period Moving Average Trendline Values:", trendLine);
             return trendLine;
@@ -947,9 +931,8 @@
                 chart: {
                     type: 'solidgauge',
                     backgroundColor: '#222222',
-                    animation: false,
-                  
-                    custom: {}, // Keep custom object for reuse
+                    animation: false,                  
+                    custom: {}, 
                     events: {
                         render() {
                             const chart = this;
@@ -999,12 +982,12 @@
                         text: null
                     },
                     lineWidth: 0,
-                    tickPositions: [], // Hide ticks
+                    tickPositions: [],
                 },
                 pane: {
                     startAngle: 0,
                     endAngle: 360,
-                    background: [{ // Full-circle gauge
+                    background: [{
                         outerRadius: '112%',
                         innerRadius: '88%',
                         backgroundColor: '#393433',
@@ -1020,27 +1003,27 @@
                     dataLabels: {
                         enabled: false
                     },
-                    innerRadius: '88%', // Ensure series matches pane's inner radius
+                    innerRadius: '88%', 
                     radius: '112%',
-                    borderRadius: '10px' // Ensure series matches pane's outer radius
+                    borderRadius: '10px' 
                 }]
             });
         }
 
         function renderStackedBarChart(data) {
-            // Use backend data directly without modifications
-            const categories = ["Production"]; // Single category for X-axis
+           
+            const categories = ["Production"]; 
             const utilisedData = [{
                 name: "Production",
                 data: [data.UtilisedTimeInSec[0]],
-                color: '#ADD8E6'// Use the first value directly from UtilisedTimeInSec
+                color: '#ADD8E6'
             }];
-            const downtimeColors = ['#FFD700', '#FFFF00', '#008000']; // Yellow, Lemon Yellow, Green
+            const downtimeColors = ['#FFD700', '#FFFF00', '#008000']; 
             const downtimeData = data.DownCategory.map((category, index) => ({
                 name: category,
-                data: [data.DownTimeInSec[index] || 0], // Use exact index mapping for DownTimeInSec
-                color: downtimeColors[index % downtimeColors.length] // Assign colors in sequence
-            })).reverse(); // Reverse the order of downtimeData
+                data: [data.DownTimeInSec[index] || 0], 
+                color: downtimeColors[index % downtimeColors.length]
+            })).reverse(); 
 
             // Log data for debugging
             console.log("Utilised Data:", utilisedData);
@@ -1050,12 +1033,12 @@
                 chart: {
                     type: 'bar',
                     backgroundColor: '#222222',
-                    animation: false,// Black background
+                    animation: false,
                 },
                 title: {
                     text: '',
                     style: {
-                        color: 'white' // Title color
+                        color: 'white' 
                     }
                 },
                 xAxis: {
@@ -1064,53 +1047,50 @@
                         text: null
                     },
                     labels: {
-                        enabled: false // Hide X-axis labels
+                        enabled: false 
                     },
-                    lineWidth: 0 // Remove X-axis line
+                    lineWidth: 0 
                 },
                 yAxis: {
                     min: 0,
                     title: {
-                        text: null // Hide Y-axis title
+                        text: null 
                     },
                     labels: {
-                        enabled: false // Hide Y-axis labels
+                        enabled: false 
                     },
                     gridLineWidth: 0
                 },
                 tooltip: {
                     valueSuffix: ' sec',
-                    shared: true // Tooltip for stacked values
+                    shared: true 
                 },
                 plotOptions: {
                     series: {
                         stacking: 'normal',
                         borderColor: '#222222',
-                        //pointPadding: 0.4, // Padding between bars
-                        //groupPadding: 0.2, // Padding between groups of bars
-                        //borderRadius: 10, // Enable stacking
                         dataLabels: {
-                            enabled: true, // Enable data labels
-                            color: 'white', // Set data label text color
+                            enabled: true, 
+                            color: 'white', 
                             style: {
-                                fontWeight: 'bold', // Make the font weight bold
-                                textOutline: 'none', // Remove the outline around data labels
-                                fontSize: '12px' // Customize font size
+                                fontWeight: 'bold', 
+                                textOutline: 'none', 
+                                fontSize: '12px' 
                             },
                             formatter: function () {
-                                return this.y; // Display the value of each data point
+                                return this.y; 
                             }
                         }
                     }
                 },
                 series: [
-                    ...downtimeData, // Add downtime categories (lower layers)
-                    ...utilisedData  // Add production (upper layer)
+                    ...downtimeData, //  (lower layers)
+                    ...utilisedData  // (upper layer)
                 ],
                 legend: {
                     reversed: true,
                     itemStyle: {
-                        color: 'white' // Legend text color
+                        color: 'white'
                     }
                 },
                 credits: {
@@ -1126,61 +1106,60 @@
 
         function initializeBarChart(Target, actual) {
 
-            // Initialize the chart
             Highcharts.chart('barchartcontainer', {
                 chart: {
                     type: 'column',
                   
                     backgroundColor: '#222222',
-                    animation: false,// Black background
+                    animation: false,
                 },
                 title: {
                     text: '',
                     style: {
-                        color: 'white' // Set title color
+                        color: 'white' 
                     }
                 },
                 xAxis: {
-                    categories: ['Target', 'Actual'], // X-axis categories
+                    categories: ['Target', 'Actual'], 
                     title: {
-                        text: null // Remove title for X-axis
+                        text: null 
                     },
                     labels: {
                         nabled: true,
                         style: {
-                            color: 'white' // X-axis labels color
+                            color: 'white' 
                         }
                     },
-                    gridLineWidth: 0, // Remove vertical grid lines
+                    gridLineWidth: 0,
                     lineWidth: 1,
                     lineColor: '#ddd',
                 },
                 yAxis: {
-                    min: 0, // Start Y-axis from 0
+                    min: 0, 
                     labels: {
-                        enabled: false // Disable Y-axis labels
+                        enabled: false 
                     },
                     title: {
-                        text: null // Remove Y-axis title
+                        text: null 
                     },
                     gridLineWidth: 0, // Remove horizontal grid lines
-                    lineWidth: 0 // Remove Y-axis line
+                    lineWidth: 0 
                 },
                 legend: {
-                    enabled: false, // Show legend
+                    enabled: false, 
                     itemStyle: {
-                        color: 'white' // Legend text color
+                        color: 'white' 
                     }
                 },
                 exporting: {
                     enabled: false
                 },
                 credits: {
-                    enabled: false // Disable Highcharts credits
+                    enabled: false 
                 },
                 plotOptions: {
                     column: {
-                        borderWidth: 1, // Border width for the bars
+                        borderWidth: 1, 
                         borderColor: '# 222222',
                         colorByPoint: false
                     }
@@ -1189,15 +1168,15 @@
                     {
                         name: '',
                         data: [
-                            { y: Target, color: 'yellow' }, // Target bar with yellow color
-                            { y: actual, color: 'green' }  // Actual bar with green color
+                            { y: Target, color: 'yellow' }, 
+                            { y: actual, color: 'green' }  
                         ],
                         dataLabels: {
-                            enabled: true, // Enable data labels for Target
-                            color: 'white', // Set data label color
+                            enabled: true, 
+                            color: 'white', 
                             style: {
-                                fontSize: '12px', // Customize the font size for the data labels
-                                fontWeight: 'bold' // Make the data labels bold
+                                fontSize: '12px', 
+                                fontWeight: 'bold' 
                             }
                         }
                     }
